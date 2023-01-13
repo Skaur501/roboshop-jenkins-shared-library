@@ -2,7 +2,7 @@ def call() {
     node {
 
         stage ('checkout code') {
-            git branch: 'main', url: 'https://github.com/Skaur501/cart.git'
+            git branch: 'main', url: "${env.REPO_URL}"
         }
 
         stage ('code quality') {

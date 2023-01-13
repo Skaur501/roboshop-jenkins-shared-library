@@ -10,8 +10,8 @@ def call() {
             sh 'ls'
         }
 
-        stage ('code quality') {
-            echo 'Code quality'
+        stage ('code Compile') {
+            echo 'Code Compile'
         }
 
         stage ('code quality') {

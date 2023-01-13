@@ -9,6 +9,10 @@ def call() {
             echo 'Code quality'
         }
 
+        stage ('code quality') {
+            echo 'Code quality'
+        }
+
         stage ('Test cases') {
             echo 'Test cases'
         }

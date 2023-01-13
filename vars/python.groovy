@@ -9,7 +9,7 @@ def call() {
             sh 'pwd'
         }
 
-        stage ('code quality') {
+        stage ('code Compile') {
             echo 'Code quality'
         }
 

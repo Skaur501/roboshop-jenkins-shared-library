@@ -19,7 +19,7 @@ def compile(appType) {
 
 def codeQuality() {
     stage('Code Quality') {
-        sh "sonar-scanner -Dsonar.login=admin -Dsonar.password=admin123 -Dsonar.host.url=http://172.31.13.67:9000 -Dsonar sonar.projectkey=${env.COMPONENT}"
+        sh "sonar-scanner -Dsonar.login=admin -Dsonar.password=admin123 -Dsonar.host.url=http://172.31.13.67:9000 -Dsonar.projectkey=${env.COMPONENT}"
     }
 }
 

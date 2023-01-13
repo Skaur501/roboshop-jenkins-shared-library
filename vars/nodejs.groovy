@@ -2,9 +2,9 @@ def call() {
     node {
 
         stage ('checkout code') {
-            cleanWs()
-            sh 'pwd'
-            sh 'ls'
+            cleanWs() // cleanup the old content and print the latest content
+            sh 'pwd' // print the path
+            sh 'ls'   // files n that path
             git branch: 'main', url: "${env.REPO_URL}"
             sh 'pwd'
             sh 'ls'

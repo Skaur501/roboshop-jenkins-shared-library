@@ -4,9 +4,11 @@ def call() {
             common.checkout()
             common.compile("java")
             common.codeQuality()
-            common.release()
-        }
-        catch (e) {
+            common.testCases("java")
+            if(env.TAG_NAME ==~ ".*") {
+                common.release("java")
+            }
+        } catch (e) {
             common.mail()
         }
     }

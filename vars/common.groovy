@@ -31,7 +31,7 @@ def release() {
 
 def mail() {
     stage() {
-        mail bcc: '', body: "<b>Example</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: 'sarbjeetkaur310@gmail.com', mimeType: 'text/html', replyTo: 'sarbjeetkaur310@gmail.com', subject: "ERROR CI: Project name -> ${env.JOB_NAME}", to: "sarbjeetkaur310@gmail.com";
-
+        mail bcc: '', body: "<h1>Pipeline Failure</h1><br>Project Name: ${COMPONENT}\nURL = ${BUILD_URL}", cc: '', charset: 'UTF-8', from: 'sarbjeetaur310@gmail.com', mimeType: 'text/html', replyTo: 'sarbjeetaur310@gmail.com', subject: "ERROR CI: Component Name - ${COMPONENT}", to: "sarbjeetaur310@gmail.com"
+        sh 'exit 1' // if exit is not equal to 0 then mark build as failure. so it will show buil as failure at the end
     }
 }

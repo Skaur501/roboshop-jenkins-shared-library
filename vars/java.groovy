@@ -6,7 +6,8 @@ def call() {
             common.codeQuality()
             common.release()
         }
-        catch (errors) {
+        catch (e) {
+            common.mail()
         }
     }
 }
